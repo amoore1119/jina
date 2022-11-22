@@ -236,6 +236,7 @@
 
 
 
+
 # Change Logs
 
 Jina is released on every Friday evening. The PyPi package and Docker Image will be updated, the changes of the release will be tracked by this file.
@@ -15210,4 +15211,20 @@ Jina is released on every Friday evening. The PyPi package and Docker Image will
  - [[```fc83fa29```](https://github.com/jina-ai/jina/commit/fc83fa299fcd1cdb7523d38d791c912a31580b25)] __-__ update announcement in readme and docs (*Jina Dev Bot*)
  - [[```1810f178```](https://github.com/jina-ai/jina/commit/1810f178ba000cda2a4f6d98d590132c51338f87)] __-__ __docs__: update TOC (*Jina Dev Bot*)
  - [[```d2760cdd```](https://github.com/jina-ai/jina/commit/d2760cddec14c28693e1bab5926965d1fc3e49d7)] __-__ __version__: the next version will be 3.10.1 (*Jina Dev Bot*)
+
+<a name=release-note-3-11-2></a>
+## Release Note (`3.11.2`)
+
+> Release time: 2022-11-22 11:14:00
+
+
+
+🙇 We'd like to thank all contributors for this new release! In particular,
+ Joan Fontanals Martinez,  Girish Chandrashekar,  🙇
+
+
+### 🍹 Other Improvements
+
+ - [[```fafd69a8```](https://github.com/jina-ai/jina/commit/fafd69a8a24757e0b85bbeae3707f25dba90ddf3)] __-__ hotfix 3.11.2 (*Joan Fontanals Martinez*)
+ - [[```2caac49c```](https://github.com/jina-ai/jina/commit/2caac49c14ae1322b4470eac9a87e2afd79f3bf0)] __-__ __version__: bump release version to 3.11.0 (#5304) (*Girish Chandrashekar*)
 
