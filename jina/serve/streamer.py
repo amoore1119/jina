@@ -1,5 +1,6 @@
 import json
 import os
+from threading import RLock
 from typing import TYPE_CHECKING, Dict, List, Optional, Sequence, Union
 
 from docarray import DocumentArray
@@ -64,6 +65,7 @@ class GatewayStreamer:
         :param aio_tracing_client_interceptors: Optional list of aio grpc tracing server interceptors.
         :param tracing_client_interceptor: Optional gprc tracing server interceptor.
         """
+        self._rlock = RLock()
         topology_graph = TopologyGraph(
             graph_representation=graph_representation,
             graph_conditions=graph_conditions,
@@ -135,7 +137,10 @@ class GatewayStreamer:
         :param kwargs: keyword arguments to be passed to inner RequestStreamer
         :return: An iterator over the responses from the Executors
         """
-        return self._streamer.stream(*args, **kwargs)
+        self._rlock.acquire()
+        res = self._streamer.stream(*args, **kwargs)
+        self._rlock.release()
+        return res
 
     async def stream_docs(
         self,
@@ -159,6 +164,7 @@ class GatewayStreamer:
         :param results_in_order: return the results in the same order as the request_iterator
         :yield: Yields DocumentArrays or Responses from the Executors
         """
+        self._rlock.acquire()
         from jina.types.request.data import DataRequest
 
         def _req_generator():
@@ -180,6 +186,7 @@ class GatewayStreamer:
                 yield resp
             else:
                 yield resp.docs
+        self._rlock.release()
 
     async def close(self):
         """
