@@ -1709,6 +1709,7 @@ def send_telemetry_event(event: str, obj: Any, **kwargs) -> None:
         return
 
     def _telemetry():
+        print('sending telemetry event')
         url = 'https://telemetry.jina.ai/'
         try:
             from jina.helper import get_full_version
@@ -1726,6 +1727,7 @@ def send_telemetry_event(event: str, obj: Any, **kwargs) -> None:
             urllib.request.urlopen(req)
 
         except:
+            print('sending failed')
             raise
 
     threading.Thread(target=_telemetry, daemon=True).start()
