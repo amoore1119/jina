@@ -1726,7 +1726,7 @@ def send_telemetry_event(event: str, obj: Any, **kwargs) -> None:
             urllib.request.urlopen(req)
 
         except:
-            pass
+            raise
 
     threading.Thread(target=_telemetry, daemon=True).start()
 
