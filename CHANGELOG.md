@@ -239,6 +239,7 @@
 
 
 
+
 # Change Logs
 
 Jina is released on every Friday evening. The PyPi package and Docker Image will be updated, the changes of the release will be tracked by this file.
@@ -15476,4 +15477,32 @@ Jina is released on every Friday evening. The PyPi package and Docker Image will
  - [[```b1fc108c```](https://github.com/jina-ai/jina/commit/b1fc108c9f9f8f72af04a0ef60e07272df4cc0eb)] __-__ __docs__: update TOC (*Jina Dev Bot*)
  - [[```854f6d2b```](https://github.com/jina-ai/jina/commit/854f6d2b79711ebc4ce2fce5f33f8ae03d58345b)] __-__ fix old docs script (#5459) (*Joan Fontanals*)
  - [[```ce7e5b77```](https://github.com/jina-ai/jina/commit/ce7e5b7760b02790eff777359748392e9d2903ab)] __-__ __version__: the next version will be 3.12.1 (*Jina Dev Bot*)
+
+<a name=release-note-3-13-2></a>
+## Release Note (`3.13.2`)
+
+> Release time: 2022-12-30 10:56:13
+
+
+
+🙇 We'd like to thank all contributors for this new release! In particular,
+ Alaeddine Abdessalem,  🙇
+
+
+### 🐞 Bug fixes
+
+ - [[```dc0fb557```](https://github.com/jina-ai/jina/commit/dc0fb5573652037165d32dc2c121f804764d66ee)] __-__ respect timeout_ready when generating startup probe (*Alaeddine Abdessalem*)
+
+### 🏁 Unit Test and CICD
+
+ - [[```e32b243d```](https://github.com/jina-ai/jina/commit/e32b243d5b4fd1955b480ea0da09fe091379b08e)] __-__ fix port (*Alaeddine Abdessalem*)
+ - [[```8acc7902```](https://github.com/jina-ai/jina/commit/8acc79020e9c5f6ac4f6b26dd808fd2170c4bf8d)] __-__ provide the correct timeout_ready value (*Alaeddine Abdessalem*)
+ - [[```70e09083```](https://github.com/jina-ai/jina/commit/70e0908337cb953e53619c944512c33e0d83593f)] __-__ fix k8s test (*Alaeddine Abdessalem*)
+ - [[```586ca06c```](https://github.com/jina-ai/jina/commit/586ca06c003478261a0c9c88f29a6167de210caa)] __-__ test k8s yaml (*Alaeddine Abdessalem*)
+ - [[```2e7959da```](https://github.com/jina-ai/jina/commit/2e7959daf96266f4af61a1c6a87bc610e714adc8)] __-__ add k8s test (*Alaeddine Abdessalem*)
+
+### 🍹 Other Improvements
+
+ - [[```90eaa3be```](https://github.com/jina-ai/jina/commit/90eaa3bedb47a14ab157d70fdc3dd1a1e4421900)] __-__ increase version (*Alaeddine Abdessalem*)
+ - [[```503ca97e```](https://github.com/jina-ai/jina/commit/503ca97eee40414ab31e55011ee09da8bce20405)] __-__ set timeout ready to 10 minutes (*Alaeddine Abdessalem*)
 
