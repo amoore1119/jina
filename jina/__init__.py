@@ -1,25 +1,25 @@
 """
-Top-level module of Jina.
+# Top-level module of Jina.
 
-The primary function of this module is to import all of the public Jina
-interfaces into a single place. The interfaces themselves are located in
-sub-modules, as described below.
+# The primary function of this module is to import all of the public Jina
+# interfaces into a single place. The interfaces themselves are located in
+# sub-modules, as described below.
 
-"""
+# """
 
-import os as _os
-import platform as _platform
-import signal as _signal
-import sys as _sys
-import warnings as _warnings
+# import os as _os
+# import platform as _platform
+# import signal as _signal
+# import sys as _sys
+# import warnings as _warnings
 
-import docarray as _docarray
+# import docarray as _docarray
 
-if _sys.version_info < (3, 7, 0):
-    raise OSError(f'Jina requires Python >= 3.7, but yours is {_sys.version_info}')
+# if _sys.version_info < (3, 7, 0):
+#   raise OSError(f'Jina requires Python >= 3.7, but yours is {_sys.version_info}')
 
 
-def _warning_on_one_line(message, category, filename, lineno, *args, **kwargs):
+# def _warning_on_one_line(message, category, filename, lineno, *args, **kwargs):
     return '\033[1;33m%s: %s\033[0m \033[1;30m(raised from %s:%s)\033[0m\n' % (
         category.__name__,
         message,
