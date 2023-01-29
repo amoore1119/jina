@@ -5,17 +5,20 @@ name: CD
 # branches:
 # - master
 
-#on:
-#  push:
-#    branches-ignore:
-#      - '**'  # temporally ignore all
+# on:
+# push:
+# branches-ignore:
+# - '**'  # temporally ignore all
 
 
-jobs:
-  update-schema:
-    if: |
-      !startsWith(github.event.head_commit.message, 'chore') &&
-      !startsWith(github.event.head_commit.message, 'build: hotfix') &&
+# jobs:
+# update-schema:
+# if: |
+# !startsWith(github.event.head_commit.message, 'chore') &&
+     
+
+
+# !startsWith(github.event.head_commit.message, 'build: hotfix') &&
       !endsWith(github.event.head_commit.message, 'reformatted by jina-dev-bot')
     runs-on: ubuntu-latest
     steps:
