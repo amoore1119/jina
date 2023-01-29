@@ -1,9 +1,9 @@
 name: CD
 
-on:
-  push:
-    branches:
-      - master
+# on:
+#  push:
+# branches:
+# - master
 
 #on:
 #  push:
@@ -297,7 +297,7 @@ jobs:
       - name: Set up Python 3.7
         uses: actions/setup-python@v4
         with:
-          python-version: 3.7
+# python-version: 3.7
       - name: Prepare enviroment
         run: |
           docker build -f Dockerfiles/test-pip.Dockerfile -t jinaai/jina:test-pip .
