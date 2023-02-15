@@ -1,65 +1,33 @@
 # Release & Version Identifier
-
-Jina is shipped from two package management systems, PyPi and Docker Hub. This article clarifies the release cycle and version identifier behind each system.
-
-<!-- START doctoc generated TOC please keep comment here to allow auto update -->
-<!-- DON'T EDIT THIS SECTION, INSTEAD RE-RUN doctoc TO UPDATE -->
-
-- [PyPi package versioning](#pypi-package-versioning)
-- [Docker image versioning](#docker-image-versioning)
-- [Manual Release Entrypoint](#manual-release-entrypoint)
-
-<!-- END doctoc generated TOC please keep comment here to allow auto update -->
-
-
-## PyPi package versioning
-
-We follow [PEP-440](https://www.python.org/dev/peps/pep-0440/), and a form of [semantic versioning](https://semver.org/) as explained above.
-
-To install the latest final release:
-
-```bash
-pip install -U jina
-```
-
-To install a particular final release:
-
-```bash
-pip install jina==x.y.z
-```
-
-The term "final release" is relative to "developmental release" as described below.  
-
-### Install Jina with Recommended Extensions
-
-`pip install -U jina` only installs the core dependencies of Jina.
-
-The recommended way of installing Jina is `pip install -U jina`
-
-`"standard"` include extra dependencies that enables:
-- Executor Hub + Docker support
-- FastAPI + Websocket support (required when using `Flow(protocol='http')` or `Flow(protocol='websocket')`)
-- the best compression via LZ4 algorithm
-- the best async eventloop management via `uvloop`
-
-Other extension tags such as  `[devel]` can be found in [extra-requirements.txt](extra-requirements.txt). 
-
-##### Do I need "[standard]"?
-
-Depends on how you use and distribute Jina. 
-
-If you are using/distributing Jina as a microservice, you often only need to install the core dependencies via `pip install jina`.
-
-### Developmental releases versioning
-
-One every master-merging event, we create early releases directly from source control which do not conflict with later project releases. The version identifier for development release is `x.y.z.devN`, which adds a suffix `.dev`, followed by a non-negative integer value `N`, which is reset on every release.
-
-To install the latest development release:
-
-```bash
-pip install --pre jina
-```
-
+# Jina is shipped from two package management systems, PyPi and Docker Hub. This article clarifies the release cycle and version identifier behind each system.
+# <!-- START doctoc generated TOC please keep comment here to allow auto update -->
+# 
+# - [Docker image versioning](#docker-image-versioning)
+# 
+# 
+# 
+# To install the latest final release:
+# ```bash
+# ```
+# To install a particular final release:
+# ```bash
+# ```
+# The term "final release" is relative to "developmental release" as described below.  
+#  ### Install Jina with Recommended Extensions
+# `pip install -U jina` only installs the core dependencies of Jina.
+# The recommended way of installing Jina is `pip install -U jina`
+# - Executor Hub + Docker support
+# - the best compression via LZ4 algorithm
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# 
+# pip install --pre jina
+# 
 ### Version epochs
 
 
